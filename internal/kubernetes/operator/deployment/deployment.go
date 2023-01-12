@@ -139,8 +139,8 @@ func BuildAtlasAdvancedDeployment(deploymentStore store.AtlasOperatorClusterStor
 	return result, nil
 }
 
-func buildGlobalDeployment(atlasRepSpec []*mongodbatlas.AdvancedReplicationSpec, globalDeploymentProvider store.GlobalDeploymentDescriber, projectID, clusterID string) ([]atlasV1.CustomZoneMapping, []atlasV1.ManagedNamespace, error) {
-	globalCluster, err := globalDeploymentProvider.GlobalDeployment(projectID, clusterID)
+func buildGlobalDeployment(atlasRepSpec []*mongodbatlas.AdvancedReplicationSpec, globalDeploymentProvider store.GlobalClusterDescriber, projectID, clusterID string) ([]atlasV1.CustomZoneMapping, []atlasV1.ManagedNamespace, error) {
+	globalCluster, err := globalDeploymentProvider.GlobalCluster(projectID, clusterID)
 	if err != nil {
 		return nil, nil, err
 	}

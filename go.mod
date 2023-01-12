@@ -25,7 +25,7 @@ require (
 	github.com/mattn/go-isatty v0.0.17
 	github.com/mongodb-forks/digest v1.0.4
 	github.com/mongodb-labs/cobra2snooty v0.12.2
-	github.com/mongodb/mongodb-atlas-kubernetes v1.5.1
+	github.com/mongodb/mongodb-atlas-kubernetes v1.5.2-0.20230108093346-a8b6093d1e8d
 	github.com/openlyinc/pointy v1.2.0
 	github.com/pelletier/go-toml v1.9.5
 	github.com/pkg/browser v0.0.0-20210115035449-ce105d075bb4
