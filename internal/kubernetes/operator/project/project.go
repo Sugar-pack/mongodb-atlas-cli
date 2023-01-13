@@ -397,7 +397,7 @@ func buildNetworkPeering(npProvider store.PeeringConnectionLister, projectID str
 	var result []atlasV1.NetworkPeer
 
 	// pagination not required, max 25 entries per provider can be configured via API
-	npList, err := npProvider.PeeringConnections(projectID, &atlas.ContainersListOptions{
+	npList, err := npProvider.PeeringConnections(projectID, &atlas.ContainersListOptions{ // TODO: check if we do not import GCP and AZURE
 		ListOptions: atlas.ListOptions{
 			ItemsPerPage: MaxItems,
 		},
